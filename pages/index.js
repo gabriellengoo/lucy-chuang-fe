@@ -58,7 +58,7 @@ export default function Home({ posts }) {
       <div className={styles.test}></div></div>
 
 {/* blobs */}
-{/* <div class="mid" > */}
+{/* <div className="mid" > */}
     <div className='overflow-hidden opacity-95'>
       <img className={styles.figure} src="https://i.ibb.co/CHJt59L/8.png"/>
         <img className={styles.figure2} src="https://i.ibb.co/NW7BvFs/6.png" /> 
@@ -81,9 +81,9 @@ export default function Home({ posts }) {
   <div id="item1" className={styles.item}>B</div>
 </div> */}
 
-{/* <div class="container">
+{/* <div className="container">
   <div>OUR STORY</div>
-  <div class="hscroll">
+  <div className="hscroll">
     Lorem ipsum dolor sit amet
   </div>  
 </div> */}
@@ -170,7 +170,7 @@ export default function Home({ posts }) {
         
 
       <div className={styles.containerflytext}>
-          <div class="hscroll2">
+          <div className="hscroll2">
             Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum 
           </div>  
       </div>
