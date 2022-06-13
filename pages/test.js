@@ -145,7 +145,7 @@ export default function Home({ posts }) {
           )) : <>No Posts Yet</>}
 </div> 
 
-<img className={styles.flower1n} src="https://i.ibb.co/yyX4PqP/3.png"/>
+<img className=' absolute top-[250vh] left-[15vw] w-[40%]' src="https://i.ibb.co/yyX4PqP/3.png"/>
 <img className={styles.flowergreen} src="https://i.ibb.co/xzd0Kz4/9.png"/>
 <img className={styles.man} src="https://i.ibb.co/1Jq6bnP/5.png"/>
 
