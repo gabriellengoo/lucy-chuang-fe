@@ -154,7 +154,7 @@ export default function Home({ posts }) {
         <img className={styles.flyingimg} src="https://i.ibb.co/9ZNbgcj/13.png"/>
         <p><span className={styles.titleofprojecthottest}>Hottest In Da</span></p>
 </div> 
-</div> 
+</div>
 
 <iframe className={styles.video}src="https://drive.google.com/file/d/14w2FfWc-LfdUSPoM79y06_sdVXXG_QXa/preview?start=1"></iframe>
 
