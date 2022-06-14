@@ -26,6 +26,9 @@ body {
     height: 100%;
     overflow: auto;
     overflow-x: hidden;
+    background-image: url("../public/images/background2.png");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
 }
 
 a {

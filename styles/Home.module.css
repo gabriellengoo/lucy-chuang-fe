@@ -315,12 +315,11 @@
 }
 
 .blurtop{
-  position: absolute;
+  position: relative;
   width: 10%;
   width: 115vw;
-  /* height: 100%; */
-    top: 185vh;
-    left: -15%;
+    top: -55vh;
+    left: 0%;
     z-index: 0;
 }
 
@@ -627,9 +626,9 @@
 .bigimgn{
   /* position:absolute; */
   z-index: -1;
-  width: 100%;
+  width: 90%;
 /* top: -10; */
-/* position:relative; */
+position:relative;
   /* left: 5%; */
   /* transform: translate(-50%, -50%); */
   /* overflow: hidden; */

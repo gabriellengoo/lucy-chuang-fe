@@ -64,14 +64,14 @@ export default function Home({ posts }) {
       {/* <img objectFit={"cover"} layout={"fill"} src="https://i.ibb.co/MfgWfH4/background-e.jpg" />  */}
   <main className={styles.main}>
 {/* BACK IMG */}
-<div className='overflow-hidden'>
-      <div className={styles.test}></div></div>
+{/* <div className='overflow-hidden'>
+      <div className={styles.test}></div></div> */}
 {/* BACK IMG */}
-<div className='overflow-hidden'>
-      <div className={styles.test2}></div></div>
+{/* <div className='overflow-hidden'>
+      <div className={styles.test2}></div></div> */}
       {/* BACK IMG */}
-<div className='overflow-hidden'>
-      <div className={styles.test3}></div></div>
+{/* <div className='overflow-hidden'>
+      <div className={styles.test3}></div></div> */}
 
 {/* blobs */}
 {/* <div className="mid" > */}
@@ -145,7 +145,7 @@ export default function Home({ posts }) {
           )) : <>No Posts Yet</>}
 </div> 
 
-<img className=' absolute top-[250vh] left-[15vw] w-[40%]' src="https://i.ibb.co/yyX4PqP/3.png"/>
+<img className={styles.flower1n} src="https://i.ibb.co/yyX4PqP/3.png"/>
 <img className={styles.flowergreen} src="https://i.ibb.co/xzd0Kz4/9.png"/>
 <img className={styles.man} src="https://i.ibb.co/1Jq6bnP/5.png"/>
 
