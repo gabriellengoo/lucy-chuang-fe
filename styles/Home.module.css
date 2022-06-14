@@ -1323,7 +1323,7 @@ left: 45vw;
 
 
 /* large desk */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1600px) {
   .blurtop{
     position: absolute;
     width: 10%;
@@ -1383,7 +1383,7 @@ left: 45vw;
 
 .video{
   position: absolute;
-  top: 750vh;
+  top: 850vh;
   width: 100vw;
   height: 100vh;
 }
