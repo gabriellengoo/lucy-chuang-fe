@@ -64,14 +64,14 @@ export default function Home({ posts }) {
       {/* <img objectFit={"cover"} layout={"fill"} src="https://i.ibb.co/MfgWfH4/background-e.jpg" />  */}
   <main className={styles.main}>
 {/* BACK IMG */}
-<div className='overflow-hidden'>
-      <div className={styles.test}></div></div>
+{/* <div className='overflow-hidden'>
+      <div className={styles.test}></div></div> */}
 {/* BACK IMG */}
-<div className='overflow-hidden'>
-      <div className={styles.test2}></div></div>
+{/* <div className='overflow-hidden'>
+      <div className={styles.test2}></div></div> */}
       {/* BACK IMG */}
-<div className='overflow-hidden'>
-      <div className={styles.test3}></div></div>
+{/* <div className='overflow-hidden'>
+      <div className={styles.test3}></div></div> */}
 
 {/* blobs */}
 {/* <div className="mid" > */}

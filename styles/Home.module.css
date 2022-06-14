@@ -98,6 +98,7 @@
   /* margin: 5px; */
   /* text-align: center; */
   z-index: 100 !important;
+  overflow: hidden;
 }
 
 .wrapper > div {
@@ -315,11 +316,12 @@
 }
 
 .blurtop{
-  position: relative;
+  position: absolute;
   width: 10%;
   width: 115vw;
-    top: -55vh;
-    left: 0%;
+  /* height: 100%; */
+    top: 185vh;
+    left: -15%;
     z-index: 0;
 }
 
@@ -529,6 +531,12 @@
   z-index: 100;
 }
 
+.test{
+width: 70%;
+position: reletive;
+
+}
+
 .headtext2{
   line-height: 55px;
   /* font-family: wtqc; */
@@ -553,7 +561,7 @@
   position:absolute;
   /* top: -143vh; */
   left: 52vw;
-  z-index: 100;
+  /* z-index: 100; */
   width: 60%;
   overflow: hidden;
   filter: drop-shadow(0rem 0rem .5rem rgb(255, 255, 255));
@@ -626,9 +634,9 @@
 .bigimgn{
   /* position:absolute; */
   z-index: -1;
-  width: 90%;
+  width: 100%;
 /* top: -10; */
-position:relative;
+/* position:relative; */
   /* left: 5%; */
   /* transform: translate(-50%, -50%); */
   /* overflow: hidden; */
@@ -1310,4 +1318,256 @@ left: 45vw;
   background-color: #373B44;
   color: white;
 
+}
+
+
+
+/* large desk */
+@media screen and (min-width: 1400px) {
+  .blurtop{
+    position: absolute;
+    width: 10%;
+    width: 115vw;
+    /* height: 100%; */
+      top: 215vh;
+      left: -15%;
+      z-index: 0;
+  }
+
+  .flower1n{
+    position: absolute;
+    top: 325vh;
+    left: 15vw;
+   
+  }
+
+  .wrapper > div:nth-child(8) {
+    /* background: #ddd; */
+    position: relative;
+    /* top: -289vh; */
+    left: 28vw;
+    width: 50%;
+    /* top: -770vh; */
+    top: -1020vh;
+  }
+  
+  /* cute man */
+.wrapper > div:nth-child(4) {
+  /* background: #ddd; */
+  position: relative;
+  /* top: -339vh; */
+  left: 38vw;
+  width: 70vh;
+  top: -459vh;
+}
+
+.flowergreen{
+  position:absolute;
+  /* top: -143vh; */
+  left: 52vw;
+  /* z-index: 100; */
+  width: 60%;
+  overflow: hidden;
+  filter: drop-shadow(0rem 0rem .5rem rgb(255, 255, 255));
+  top: 650vh;
+    left: 52vw;
+}
+/* shooting man */
+.wrapper > div:nth-child(2) {
+  /* background: #ddd; */
+  position: relative;
+  top: 25vh;
+  left: -20vw;
+  width: 50vw;
+}
+
+.video{
+  position: absolute;
+  top: 950vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*  blue blob */
+.wrapper > div:nth-child(5) {
+  /* background: #ddd; */
+  position: relative;
+  top: -350vh;
+  left: -14vw;
+  width: 70%;
+}
+
+.man{
+  z-index: 100;
+  width: 60%;
+  overflow: hidden;
+  position: relative;
+  left: 0vw;
+  filter: drop-shadow(0rem 0rem .5rem rgb(255, 255, 255));
+  top: -810vh;
+}
+
+.hscroll{ 
+  /* font-size: 5vw; */
+  /* white-space: nowrap; */
+  position: absolute;
+   /* font-size: 5vw;  */
+    /* white-space: nowrap; */
+    /* position: absolute; */
+    z-index: 400;
+    /* border: none; */
+    /* left: 80vw; */
+    position: relative;
+    /* position: absolute; */
+    top: -758vh;
+    left: 80vw;
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+
+.titleofprojectsn2{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* line-height: 36px; */
+font-weight: 300;
+color: #ffffff;
+/* font-family: serif; */
+font-style: italic;
+text-decoration: underline;
+font-size: 67px;
+width: 70%;
+top: -55vh;
+left: 34vw;
+}
+
+.wrapper > div:nth-child(7) {
+  /* background: #ddd; */
+  position: relative;
+  top: -330vh;
+    left: 35vw;
+    width: 50%;
+    transform: rotate(341deg);
+    width: 40%;
+}
+
+.botflower{
+  z-index: 100;
+  width: 60%;
+  overflow: hidden;
+  position: absolute;
+  left: 0vw;
+  filter: drop-shadow(0rem 0rem .5rem rgb(255, 255, 255));
+  top: 1200vh;
+    left: 37vw;
+}
+
+.wrapper > div:nth-child(6) {
+  /* background: #ddd; */
+  position: relative;
+  top: -220vh;
+  left: 28vw;
+  width: 50%;
+  transform: rotate(345deg);
+  /* left: 37vw; */
+}
+}
+
+/* larger */
+@media screen and (min-width: 1600px) {
+  .blurtop{
+    position: absolute;
+    width: 10%;
+    width: 145vw;
+    /* height: 100%; */
+      top: 225vh;
+      left: -15%;
+      z-index: 0;
+  }
+  .flower1n{
+    position: absolute;
+    top: 400vh;
+    left: 15vw;
+   
+  }
+
+  .wrapper > div:nth-child(8) {
+    /* background: #ddd; */
+    position: relative;
+    /* top: -289vh; */
+    left: 28vw;
+    width: 50%;
+    /* top: -770vh; */
+    top: -1080vh;
+  }
+
+  /* cute man */
+.wrapper > div:nth-child(4) {
+  /* background: #ddd; */
+  position: relative;
+  /* top: -339vh; */
+  left: 38vw;
+  width: 85vh;
+  top: -459vh;
+}
+
+.flowergreen{
+  position:absolute;
+  /* top: -143vh; */
+  left: 52vw;
+  /* z-index: 100; */
+  width: 60%;
+  overflow: hidden;
+  filter: drop-shadow(0rem 0rem .5rem rgb(255, 255, 255));
+  top: 850vh;
+    left: 52vw;
+}
+}
+@media screen and (min-width: 1900px) {
+  .blurtop{
+    position: absolute;
+    width: 10%;
+    width: 175vw;
+    /* height: 100%; */
+      top: 250vh;
+      left: -15%;
+      z-index: 0;
+  }
+  .flower1n{
+    position: absolute;
+    top: 475vh;
+    left: 15vw;
+   
+  }
+
+  .wrapper > div:nth-child(8) {
+    /* background: #ddd; */
+    position: relative;
+    /* top: -289vh; */
+    left: 28vw;
+    width: 50%;
+    /* top: -770vh; */
+    top: -1140vh;
+  }
+
+  /* cute man */
+.wrapper > div:nth-child(4) {
+  /* background: #ddd; */
+  position: relative;
+  /* top: -339vh; */
+  left: 38vw;
+  width: 100vh;
+  top: -459vh;
+}
+
+.flowergreen{
+  position:absolute;
+  /* top: -143vh; */
+  left: 52vw;
+  /* z-index: 100; */
+  width: 60%;
+  overflow: hidden;
+  filter: drop-shadow(0rem 0rem .5rem rgb(255, 255, 255));
+  top: 1050vh;
+    left: 52vw;
+}
 }

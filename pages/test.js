@@ -130,24 +130,24 @@ export default function Home({ posts }) {
 
 
 
-<section className={styles.section}>  
-  <div className={styles.content}>
+<section >  
+  <div >
   {/* <span className={styles.dot}></span> */}
   {/* <h1 className={styles.entropyraw}>Raw Reality</h1> */}
   <div className={styles.wrapper}>
   {mappedPosts.length ? mappedPosts.map((p, id) => (
             <div onClick={() => router.push(`/firsttwo/${p.slug.current}`)} key={id}>
                       {/* <div className={styles.containerproject2}> */}
-                        <img  className={styles.mainImage2} src={p.mainImagefirsttwo} />
-                        <p className={styles.titleofprojectsn2}>{p.titleofproject}</p>
+                        <img   src={p.mainImagefirsttwo} />
+                        <p >{p.titleofproject}</p>
                   </div>
             // </div> 
           )) : <>No Posts Yet</>}
 </div> 
 
-<img className={styles.flower1n} src="https://i.ibb.co/yyX4PqP/3.png"/>
+{/* <img className={styles.flower1n} src="https://i.ibb.co/yyX4PqP/3.png"/>
 <img className={styles.flowergreen} src="https://i.ibb.co/xzd0Kz4/9.png"/>
-<img className={styles.man} src="https://i.ibb.co/1Jq6bnP/5.png"/>
+<img className={styles.man} src="https://i.ibb.co/1Jq6bnP/5.png"/> */}
 
 <div className={styles.hscroll}>
 <div className="hscroll">
