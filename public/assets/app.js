@@ -80,26 +80,65 @@ gsap.to('.hscroll2', {
 })
 
 
-gsap.registerPlugin(ScrollTrigger);
-const tl = gsap.timeline();
-tl.to(".mid", {
-    scrollTrigger: {
-        trigger: ".mid",
-        // markers: true,
-        start: "60% center",
-        end: "70% center",
-        scrub: true,
-    },
-    scale:1,
-});
-tl.to(".mid", {
-    scrollTrigger: {
-        trigger: ".mid",
-        // markers: true,
-        start: "70% center",
-        end: "80% center",
-        scrub: true,
-    },
-    scale:2,
-    immediateRender: false
-});
+// gsap.to('.mid', {
+//   xPercent: -150,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".mid",
+//     start: "top bottom",
+//     end: "bottom top",
+//     scrub: true,
+//     scale:1,
+//   }
+// })
+
+
+
+// gsap.registerPlugin(ScrollTrigger);
+// const tl = gsap.timeline();
+// tl.to(".mid", {
+//     scrollTrigger: {
+//         trigger: ".mid",
+//         markers: true,
+//         start: "top 20%",
+//         end: "70% center",
+//         scrub: true,
+//     },
+//     scale:1,
+// });
+// tl.to(".mid", {
+//     scrollTrigger: {
+//         trigger: ".mid",
+//         markers: true,
+//         start: "0% bottom",
+//         end: "80% center",
+//         scrub: true,
+//     },
+//     scale:2,
+//     immediateRender: false
+// });
+
+
+
+// gsap.to('.hscroll3', {
+//   xPercent: -5,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".hscroll3",
+//     start: "bottom center",
+//     end: "bottom top",
+//     scrub: true
+//   }
+// })
+
+
+
+
+
+
+
+
+
+
+
+

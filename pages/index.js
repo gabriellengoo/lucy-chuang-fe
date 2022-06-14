@@ -236,7 +236,7 @@ export default function Home({ posts }) {
 export const getServerSideProps = async pageContext => {
   // const query = encodeURIComponent('*[ _type == "firsttwo" ]');
 //   '*[ _type in ["firsttwo", "secondtwo"] ]' _id == "abc.123"
-  const query = encodeURIComponent(`*[ _type in ["firsttwo" , "secondtwo" ]]`);
+  const query = encodeURIComponent(`*[ _type in ["firsttwo" ]]`);
 //   const query = encodeURIComponent(`*[_id in path("1.2.3.*")]`);
   const url = `https://wie5l8nw.api.sanity.io/v1/data/query/production?query=${query}`;
   const result = await fetch(url).then(res => res.json());

@@ -1,4 +1,6 @@
-import { createClient, createImageUrlBuilder } from "next-sanity"
+import { createClient } from "next-sanity"
+import { createImageUrlBuilder } from "next-sanity"
+
 
 const config = {
   /**
