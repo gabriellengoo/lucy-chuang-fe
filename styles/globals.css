@@ -54,11 +54,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     /* overflow: hidden; */
     /* height: 500vh; might need? */
-    overflow: auto;
+    /* overflow: auto; */
     overflow-x: hidden;
     background-image: url("../public/images/background2.png");
     /* background-repeat: no-repeat; */
     background-size: cover;
+    min-height: 100%
 }
 
 a {
@@ -73,16 +74,16 @@ a {
 
 
 section{
-  height: 100vh;
+  /* height: 100vh; */
   padding-top: 20px;
 }
 
 
-section::after {
+/* section::after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 /* img, video {
     max-width: 100%;
     height: auto;
