@@ -1,4 +1,60 @@
 
+class Slider {
+  constructor(slider) {
+    this.slider = slider;
+    this.mouseDown = false;
+    this.slider.addEventListener('mousedown', e => this.handleMouseDown(e));
+    this.slider.addEventListener('mousemove', e => this.handleMouseMove(e));
+    this.boundMouseUp = this.handleMouseUp.bind(this); // enables removing of window event listener
+    
+    this.isSmoothScrollSupported = 'scrollBehavior' in slider.style;
+    
+    this.frames = [...slider.querySelectorAll('.item')];
+    this.currentFrame = frames[0];
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio === 1) this.currentFrame = entry.target;
+      })
+    }, {root: slider, rootMargin: '0px', threshold: 1.0})
+    this.frames.forEach(mf => this.observer.observe(mf));
+  }
+  
+  handleMouseDown(e) {
+    e.preventDefault();
+    this.mouseDown = true;
+    window.addEventListener('mouseup', this.boundMouseUp);
+  }
+  
+  handleMouseUp(e) {
+    this.mouseDown = false;
+    window.removeEventListener('mouseup', this.boundMouseUp);
+  }
+  
+    handleMouseMove(e) {
+    /* If the user is holding down the mouse and dragging the cursor, scroll inside of this.slider */
+    if (this.mouseDown && e.movementX) {
+      const newFrame = e.movementX > 0 ? this.currentFrame.previousElementSibling : this.currentFrame.nextElementSibling;
+      if (this.isSmoothScrollSupported) {
+        (newFrame || this.currentFrame).scrollIntoView({
+            inline: 'center',
+            behavior: 'smooth'
+          });
+      } else {
+        const movmt = e.movementX * -1;
+        this.slider.scrollBy(movmt, 0);
+      }
+    }
+  }
+}
+
+new Slider(document.querySelector('#slider-1'));
+
+
+// setTimeout(function() {
+//   $('.loaderwrapper').hide();
+//   $('.editorialimages').fadeIn('fast');
+// }, 2000);
+
 // var leftItem = document.getElementById('item0'),
 // rightItem = document.getElementById('item1');
 
@@ -80,6 +136,12 @@ gsap.to('.hscroll2', {
 })
 
 
+
+
+
+// $(window).scroll(function(){
+//   $(".div.hscroll3 > div").css("opacity", 1 - $(window).scrollTop() / 250);
+// });
 // gsap.to('.mid', {
 //   xPercent: -150,
 //   ease: "none",
@@ -120,19 +182,49 @@ gsap.to('.hscroll2', {
 
 
 
-// gsap.to('.hscroll3', {
-//   xPercent: -5,
+// gsap.to('.hscroll3 > div > img', {
+//   xPercent: -1,
 //   ease: "none",
 //   scrollTrigger: {
 //     trigger: ".hscroll3",
-//     start: "bottom center",
+//     start: "top center",
 //     end: "bottom top",
+//     scale: 0.2,
 //     scrub: true
 //   }
 // })
 
 
+gsap.registerPlugin(ScrollTrigger);
 
+let sections = gsap.utils.toArray(".hscroll3 > div");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".container",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    // base vertical scrolling on how wide the container is so it feels more natural.
+    end: "+=3500",
+  }
+});
+
+
+
+
+
+
+
+
+
+$(window).scroll(function(){
+  $(".hscroll3 > div").css("opacity", 1 - $(window).scrollTop() / 250);
+});
+
+console.log("hey im here")
 
 
 

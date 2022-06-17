@@ -49,7 +49,7 @@ export default function Home({ posts }) {
       <Head>
         <title>Lucy Chuang</title>
         <meta name="description" content="Lucy Chuang portfolio" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="https://i.ibb.co/9T4ft5j/logo.png" />
         <script src="http://owlcarousel.owlgraphic.com/assets/vendors/jquery.mousewheel.min.js" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
@@ -64,8 +64,8 @@ export default function Home({ posts }) {
       {/* <img objectFit={"cover"} layout={"fill"} src="https://i.ibb.co/MfgWfH4/background-e.jpg" />  */}
   <main className={styles.main}>
 {/* BACK IMG */}
-{/* <div className='overflow-hidden'>
-      <div className={styles.test}></div></div> */}
+<div className='overflow-hidden'>
+      <div className={styles.test}></div></div>
 {/* BACK IMG */}
 {/* <div className='overflow-hidden'>
       <div className={styles.test2}></div></div> */}
@@ -74,18 +74,9 @@ export default function Home({ posts }) {
       <div className={styles.test3}></div></div> */}
 
 {/* blobs */}
-{/* <div className="mid" > */}
-    <div className='overflow-hidden opacity-95'>
+{/* <div className="mid" > 'overflow-hidden relative w-[140vw] opacity-95 */}
+    <div className={styles.figuren}>
     <img className={styles.figuren} src="https://i.ibb.co/JnRKs4M/foreground.png"/>
-      {/* <img className={styles.figure} src="https://i.ibb.co/CHJt59L/8.png"/> */}
-        {/* <img className={styles.figure2} src="https://i.ibb.co/NW7BvFs/6.png" /> 
-        <img className={styles.figure3} src="https://i.ibb.co/SvtsSWZ/7.png" /> 
-        <img className={styles.figure4} src="https://i.ibb.co/CHJt59L/8.png"/>
-        <img className={styles.figure5} src="https://i.ibb.co/NW7BvFs/6.png" /> 
-        <img className={styles.figure6} src="https://i.ibb.co/NW7BvFs/6.png" />
-        <img className={styles.figure7} src="https://i.ibb.co/SvtsSWZ/7.png" /> 
-        <img className={styles.figure8} src="https://i.ibb.co/CHJt59L/8.png"/>
-        <img className={styles.figure9} src="https://i.ibb.co/SvtsSWZ/9.png" />  */}
     </div>
     {/* </div> */}
 
@@ -115,13 +106,24 @@ export default function Home({ posts }) {
        <section className={styles.section} > 
        {/* <div className="intro"> */}
   <div className={styles.content}>
-  <img className={styles.logo} src="https://i.ibb.co/9T4ft5j/logo.png"/>
-    <img className={styles.bigimgn} src="https://i.ibb.co/2nX1L0V/documentary-link-1.png"/>
-    <img className={styles.blurtop} src="https://i.ibb.co/5vYsyv7/entropy-link-blur.png"/>
-    <marquee className={styles.entropy}>entropy entropy entropy entropy entropy entropy entropy
-     entropy entropy entropy entropy entropy entropy entropy entropy entropy entropy entropy
-     entropy entropy entropy entropy entropy entropy entropy entropy entropy entropy entropy
-     entropy entropy entropy entropy entropy entropy entropy entropy entropy entropy entropy</marquee>
+
+    <div className={styles.logocont}>
+    <img className={styles.logo} src="https://i.ibb.co/9T4ft5j/logo.png"/>
+    
+    </div>
+
+    <img className={styles.bigimgn} src="https://i.ibb.co/Y3s7XSH/entropy-link.png"/>
+
+    <div className={styles.blurtopcont}>
+    <img className={styles.blurtop} src="https://i.ibb.co/M7q9767/output-onlinepngtools.png"/>
+    
+    </div>
+
+    <div className={styles.entropycont}> <p className={styles.entropy}>entropy entropy entropy entropy entropy entropy entropy
+     entropy entropy entropy entropy entropy 
+    </p>
+    </div>
+   
  </div>
  {/* </div>  */}
 </section>
@@ -134,6 +136,10 @@ export default function Home({ posts }) {
   <div className={styles.content}>
   {/* <span className={styles.dot}></span> */}
   {/* <h1 className={styles.entropyraw}>Raw Reality</h1> */}
+  {/* BACK IMG */}
+
+      <div className={styles.test3}></div>
+
   <div className={styles.wrapper}>
   {mappedPosts.length ? mappedPosts.map((p, id) => (
             <div onClick={() => router.push(`/firsttwo/${p.slug.current}`)} key={id}>
@@ -149,14 +155,18 @@ export default function Home({ posts }) {
 <img className={styles.flowergreen} src="https://i.ibb.co/xzd0Kz4/9.png"/>
 <img className={styles.man} src="https://i.ibb.co/1Jq6bnP/5.png"/>
 
+<div className={styles.hscrollcont}>
 <div className={styles.hscroll}>
 <div className="hscroll">
-        <img className={styles.flyingimg} src="https://i.ibb.co/9ZNbgcj/13.png"/>
-        <p><span className={styles.titleofprojecthottest}>Hottest In Da</span></p>
+        <img className={styles.flyingimg} src="https://i.ibb.co/hLScpnh/13-1-1.png"/>
+        <p><span className={styles.titleofprojecthottest}>Hottest In Da Metaverse</span></p>
 </div> 
 </div> 
+</div>
 
-<iframe className={styles.video}src="https://drive.google.com/file/d/14w2FfWc-LfdUSPoM79y06_sdVXXG_QXa/preview?start=1"></iframe>
+<div className={styles.videocont}>
+<iframe className={styles.video} src="https://drive.google.com/file/d/14w2FfWc-LfdUSPoM79y06_sdVXXG_QXa/preview?start=1"></iframe>
+</div>
 
 
 <img className={styles.botflower} src="https://i.ibb.co/TDXZH4y/1-2.png"/>

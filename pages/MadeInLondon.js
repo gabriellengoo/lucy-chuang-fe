@@ -1,31 +1,20 @@
-import imageUrlBuilder from '@sanity/image-url';
+// import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
-import styles from '../../styles/Post.module.css';
+import styles from '../styles/Post.module.css';
 import BlockContent from '@sanity/block-content-to-react';
 import Head from 'next/head';
-import Image from "../../components/Image";
+// import Image from "../components/Image";
+import React from 'react';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 
-
-export const Post = ({ titleofproject, bodyofproject, mainImagefirsttwo, images }) => {
-  const [imageUrl, setImageUrl] = useState('');
-
-  console.log(
-    images)
-  useEffect(() => {
-    const imgBuilder = imageUrlBuilder({
-      projectId: 'wie5l8nw',
-      dataset: 'production',
-    });
-
-    setImageUrl(imgBuilder.image(mainImagefirsttwo));
-  }, []);
-
+export default function Home ({}) {
   return (
     
 <div className={styles.main}>
             <Head>
-              <title>{titleofproject}</title>
+              <title>Made In London</title>
               <meta name="description" content="Lucy Chuang portfolio" />
               {/* <link rel="icon" href="/favicon.ico" /> */}
               <link rel="icon" href="https://i.ibb.co/9T4ft5j/logo.png" />
@@ -99,13 +88,70 @@ export const Post = ({ titleofproject, bodyofproject, mainImagefirsttwo, images 
                     
 
 
-                  <div className={styles.text}>
-                            <h1 className={styles.title} >{titleofproject}</h1>
-                            {/* <h2>{categories}</h2> */}
+                  {/* <div className={styles.text}>
+                            <h1 className={styles.title} >Made In London</h1>
                       <div className={styles.bodyofproject}>
-                        <BlockContent blocks={bodyofproject} />
                       </div>
-                      </div>
+                      </div> */}
+
+<div className={styles.logocont}>
+    <img className={styles.logo} src="https://i.ibb.co/9T4ft5j/logo.png"/>
+    </div>
+
+
+<div className={styles.allscr}>
+
+<div  className={styles.container}>
+  <div className={styles.slider} id="slider-1">
+    <img className={styles.item} src="https://i.ibb.co/wQKF71b/1a-1.png"/>
+    <img className={styles.item} src="https://i.ibb.co/J5NxhYM/2a-1.png"/>
+    <img className={styles.item} src="https://i.ibb.co/9gGpyLs/4a-1.png"/>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+  </div>
+</div>
+
+{/* https://i.ibb.co/dmGLmyy/2b-1.png*/}
+<div  className={styles.container}>
+  <div className={styles.slider} id="slider-1">
+  <img className={styles.item} src="https://i.ibb.co/0fS3DX3/1b-1.png"/>
+  <img className={styles.item} src="https://i.ibb.co/dmGLmyy/2b-1.png"/>
+  <img className={styles.item} src="https://i.ibb.co/Vq5csSC/3b-1.png"/>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+  </div>
+</div>
+
+<div  className={styles.container2}>
+  <div className={styles.slider} id="slider-1">
+  <img className={styles.item} src="https://i.ibb.co/w4jrQkY/1c-1.png"/>
+  <img className={styles.item} src="https://i.ibb.co/B3jCknM/2c-1.png"/>
+  <img className={styles.item} src="https://i.ibb.co/tPzcDPB/3c-1.png"/>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+    <div className={styles.item}></div>
+  </div>
+</div>
+
+
+</div>
 
 
 
@@ -114,22 +160,7 @@ export const Post = ({ titleofproject, bodyofproject, mainImagefirsttwo, images 
 
 
 
-
-                  <div className={styles.hscroll3}>
-                  {/* <div className="hscroll3"> */}
-                        {images.map(({ _key, asset }, image) => ( <Image key={_key} identifier="image" image={asset} />
-                        ))}
-                        </div>
-                      {/* </div> */}
-                      </div>
-
-
-
-
-
-
-
-
+                 </div>
         </div>
       </div>
     </div>
@@ -142,38 +173,3 @@ export const Post = ({ titleofproject, bodyofproject, mainImagefirsttwo, images 
 
 
 
-
-
-export const getServerSideProps = async pageContext => {
-  const pageSlug = pageContext.query.slug;
-  
-  if (!pageSlug) {
-    return {
-      notFound: true
-    }
-  }
-
-  const query = encodeURIComponent(`*[ _type == "firsttwo" && slug.current == "${pageSlug}" ]`);
-  const url = `https://wie5l8nw.api.sanity.io/v1/data/query/production?query=${query}`;
-
-  const result = await fetch(url).then(res => res.json());
-  const post = result.result[0];
-
-  if (!post) {
-    return {
-      notFound: true
-    }
-  } else {
-    return {
-      props: {
-        bodyofproject: post.bodyofproject,
-        titleofproject: post.titleofproject,
-        mainImagefirsttwo: post.mainImagefirsttwo,
-        // categories: post.categories,
-        images: post.images,
-      }
-    }
-  }
-};
-
-export default Post;
