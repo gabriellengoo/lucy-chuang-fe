@@ -40,7 +40,7 @@ export const Post = ({ titleofproject, bodyofproject, mainImagefirsttwo, images 
               <script src="https://unpkg.co/gsap@3/dist/gsap.min.js" defer></script>
               <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
               <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" defer></script>
-              <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+              <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" defer></script>
 
 
               <script src="../../assets/app.js" defer></script>
