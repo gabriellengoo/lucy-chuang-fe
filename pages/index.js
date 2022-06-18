@@ -53,7 +53,7 @@ export default function Home({ posts }) {
         <script src="http://owlcarousel.owlgraphic.com/assets/vendors/jquery.mousewheel.min.js" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
-        {/* <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" defer></script> */}
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" defer></script>
         
@@ -140,6 +140,7 @@ export default function Home({ posts }) {
   {/* BACK IMG */}
 
       <div className={styles.test3}></div>
+      {/* <div className={styles.test4}></div> */}
 
   <div className={styles.wrapper}>
   {mappedPosts.length ? mappedPosts.map((p, id) => (
@@ -150,6 +151,8 @@ export default function Home({ posts }) {
                   </div>
             // </div> 
           )) : <>No Posts Yet</>}
+
+<img className={styles.botflower} src="https://i.ibb.co/TDXZH4y/1-2.png"/>
 </div> 
 
 <img className={styles.flower1n} src="https://i.ibb.co/yyX4PqP/3.png"/>
@@ -157,20 +160,38 @@ export default function Home({ posts }) {
 <img className={styles.man} src="https://i.ibb.co/1Jq6bnP/5.png"/>
 
 <div className={styles.hscrollcont}>
-<div className={styles.hscroll}>
+{/* <div className={styles.hscroll}> */}
 <div className="hscroll">
         <img className={styles.flyingimg} src="https://i.ibb.co/hLScpnh/13-1-1.png"/>
         <p><span className={styles.titleofprojecthottest}>Hottest In Da Metaverse</span></p>
-</div> 
+{/* </div>  */}
 </div> 
 </div>
+
+
+
 
 <div className={styles.videocont}>
-<iframe className={styles.video} src="https://drive.google.com/file/d/14w2FfWc-LfdUSPoM79y06_sdVXXG_QXa/preview?start=1"></iframe>
+{/* <iframe className={styles.video} src="https://drive.google.com/file/d/14w2FfWc-LfdUSPoM79y06_sdVXXG_QXa/preview?start=1"></iframe> */}
+{/* style="transform: translateY(-38.2813%);" style="position:absolute;top:0;left:0;width:100%;height:100%;" */}
+{/* <div class="video-wrapper"><div class="plyr__video-embed__container" > */}
+          <iframe src="https://player.vimeo.com/video/721799699?h=b659979974?background=1&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" className={styles.video} allow="autoplay; fullscreen; picture-in-picture; loop=1; muted=1" id="video" muted webkitallowfullscreen mozallowfullscreen allowfullscreen title="fixed metaverse"></iframe>            
+          {/* <div class="plyr__captions"></div> */}
+      {/* </div> */}
 </div>
 
 
-<img className={styles.botflower} src="https://i.ibb.co/TDXZH4y/1-2.png"/>
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
 </section>
@@ -233,9 +254,9 @@ export default function Home({ posts }) {
   <div className="px-1">
     <ul className="list-none font-light text-left" >
     <p className=' text-left '>Contact me :)</p>
-      <li>LucyChuang@...</li>
-      <li>Instagram</li>
-      <li>Something else..</li>
+      <li>xinyu.c.contact@gmail.com</li>
+      {/* <li>Instagram</li> */}
+      <a href="https://www.instagram.com/chuangxyyy/" data-location="internal">Instagram</a>
     </ul>
   </div>
 </div>

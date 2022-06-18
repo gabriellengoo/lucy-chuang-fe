@@ -1,54 +1,4 @@
 
-class Slider {
-  constructor(slider) {
-    this.slider = slider;
-    this.mouseDown = false;
-    this.slider.addEventListener('mousedown', e => this.handleMouseDown(e));
-    this.slider.addEventListener('mousemove', e => this.handleMouseMove(e));
-    this.boundMouseUp = this.handleMouseUp.bind(this); // enables removing of window event listener
-    
-    this.isSmoothScrollSupported = 'scrollBehavior' in slider.style;
-    
-    this.frames = [...slider.querySelectorAll('.item')];
-    this.currentFrame = frames[0];
-    this.observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio === 1) this.currentFrame = entry.target;
-      })
-    }, {root: slider, rootMargin: '0px', threshold: 1.0})
-    this.frames.forEach(mf => this.observer.observe(mf));
-  }
-  
-  handleMouseDown(e) {
-    e.preventDefault();
-    this.mouseDown = true;
-    window.addEventListener('mouseup', this.boundMouseUp);
-  }
-  
-  handleMouseUp(e) {
-    this.mouseDown = false;
-    window.removeEventListener('mouseup', this.boundMouseUp);
-  }
-  
-    handleMouseMove(e) {
-    /* If the user is holding down the mouse and dragging the cursor, scroll inside of this.slider */
-    if (this.mouseDown && e.movementX) {
-      const newFrame = e.movementX > 0 ? this.currentFrame.previousElementSibling : this.currentFrame.nextElementSibling;
-      if (this.isSmoothScrollSupported) {
-        (newFrame || this.currentFrame).scrollIntoView({
-            inline: 'center',
-            behavior: 'smooth'
-          });
-      } else {
-        const movmt = e.movementX * -1;
-        this.slider.scrollBy(movmt, 0);
-      }
-    }
-  }
-}
-
-new Slider(document.querySelector('#slider-1'));
-
 
 // setTimeout(function() {
 //   $('.loaderwrapper').hide();
@@ -113,27 +63,27 @@ new Slider(document.querySelector('#slider-1'));
 // });
 
 gsap.to('.hscroll', {
-  xPercent: -150,
+  xPercent: -350,
   ease: "none",
   scrollTrigger: {
     trigger: ".hscroll",
-    start: "top center",
-    end: "bottom top",
+    start: "left bottom",
+    end: "bottom left",
     scrub: true
   }
 })
 
 
-gsap.to('.hscroll2', {
-  xPercent: -5,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".hscroll2",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true
-  }
-})
+// gsap.to('.hscroll2', {
+//   xPercent: -5,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".hscroll2",
+//     start: "top bottom",
+//     end: "bottom top",
+//     scrub: true
+//   }
+// })
 
 
 
@@ -220,9 +170,9 @@ gsap.to(sections, {
 
 
 
-$(window).scroll(function(){
-  $(".hscroll3 > div").css("opacity", 1 - $(window).scrollTop() / 250);
-});
+// $(window).scroll(function(){
+//   $(".hscroll3 > div").css("opacity", 1 - $(window).scrollTop() / 250);
+// });
 
 console.log("hey im here")
 
@@ -231,6 +181,56 @@ console.log("hey im here")
 
 
 
+
+class Slider {
+  constructor(slider) {
+    this.slider = slider;
+    this.mouseDown = false;
+    this.slider.addEventListener('mousedown', e => this.handleMouseDown(e));
+    this.slider.addEventListener('mousemove', e => this.handleMouseMove(e));
+    this.boundMouseUp = this.handleMouseUp.bind(this); // enables removing of window event listener
+    
+    this.isSmoothScrollSupported = 'scrollBehavior' in slider.style;
+    
+    this.frames = [...slider.querySelectorAll('.item')];
+    this.currentFrame = frames[0];
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio === 1) this.currentFrame = entry.target;
+      })
+    }, {root: slider, rootMargin: '0px', threshold: 1.0})
+    this.frames.forEach(mf => this.observer.observe(mf));
+  }
+  
+  handleMouseDown(e) {
+    e.preventDefault();
+    this.mouseDown = true;
+    window.addEventListener('mouseup', this.boundMouseUp);
+  }
+  
+  handleMouseUp(e) {
+    this.mouseDown = false;
+    window.removeEventListener('mouseup', this.boundMouseUp);
+  }
+  
+    handleMouseMove(e) {
+    /* If the user is holding down the mouse and dragging the cursor, scroll inside of this.slider */
+    if (this.mouseDown && e.movementX) {
+      const newFrame = e.movementX > 0 ? this.currentFrame.previousElementSibling : this.currentFrame.nextElementSibling;
+      if (this.isSmoothScrollSupported) {
+        (newFrame || this.currentFrame).scrollIntoView({
+            inline: 'center',
+            behavior: 'smooth'
+          });
+      } else {
+        const movmt = e.movementX * -1;
+        this.slider.scrollBy(movmt, 0);
+      }
+    }
+  }
+}
+
+new Slider(document.querySelector('#slider-1'));
 
 
 
