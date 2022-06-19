@@ -26,9 +26,9 @@ gsap.to('.hscroll', {
 })
 
 
-(function () {
-  var scroll = new LocomotiveScroll();
-})();
+// (function () {
+//   var scroll = new LocomotiveScroll();
+// })();
 
 // gsap.to('.hscroll2', {
 //   xPercent: -5,
