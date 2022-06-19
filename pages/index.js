@@ -163,7 +163,7 @@ export default function Home({ posts }) {
 
      <div className={styles.hscrollcont}>
                   {/* <div className={styles.hscroll}> */}
-                        <div className="hscroll">
+                        <div className={styles.hscroll}>
                                 <img className={styles.flyingimg} src="https://i.ibb.co/hLScpnh/13-1-1.png"/>
                                 <p><span className={styles.titleofprojecthottest}>Hottest In Da Metaverse</span></p>
                         {/* </div>  */}

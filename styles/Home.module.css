@@ -916,9 +916,9 @@ position:relative;
 
 
 
-.hscroll{ 
+/* .hscroll{ 
   width: 70%;
-}
+} */
 
 .hscrollcont{ 
   z-index: 400;
