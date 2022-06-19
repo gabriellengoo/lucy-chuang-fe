@@ -1,13 +1,13 @@
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import styles from '../../styles/Post.module.css';
-import BlockContent from '@sanity/block-content-to-react';
+// import BlockContent from '@sanity/block-content-to-react';
 import Head from 'next/head';
 import Image from "../../components/Image";
 
 
 
-export const Post = ({ titleofproject, bodyofproject, mainImagefirsttwo, images }) => {
+export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
   const [imageUrl, setImageUrl] = useState('');
 
   console.log(
@@ -40,10 +40,10 @@ export const Post = ({ titleofproject, bodyofproject, mainImagefirsttwo, images 
               <script src="https://unpkg.co/gsap@3/dist/gsap.min.js" defer></script>
               <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
               <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" defer></script>
-              <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" defer></script>
+              {/* <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" defer></script> */}
 
 
-              <script src="../../assets/app.js" defer></script>
+              <script type="module" src="../../assets/app.js" defer></script>
 
             </Head>
 
@@ -56,28 +56,28 @@ export const Post = ({ titleofproject, bodyofproject, mainImagefirsttwo, images 
 
     <div className={styles.maininterior}>
       
-    <div className={styles.loaderwrapper}>
+    {/* <div className={styles.loaderwrapper}>
     <span className={styles.loader}><span className={styles.loaderinner}> <img className={styles.figuren} src="https://i.ibb.co/PmNwYcP/mr-bean-checking-time.gif"/></span></span>
-    </div>
+    </div> */}
 
       <div className={styles.editorialimages}>
         <div className={styles.wcontent}>
 
-                      <header className={styles.header}>
+                <header className={styles.header}>
                   <div className={styles.tlabel}>
                               <div className={styles.headeredition}>
                                 <a href="../" data-location="internal">
                                   2022 LUCY CHUANG
                                 </a>
                               </div>
-                            <div className={styles.headertime}>06:20:22</div>
+                              <div className={styles.headertime}>06:20:22</div>
                           <div id="header-customer">
                       
                                 <a href="https://www.instagram.com/is_this_gabrielle/" data-location="internal">© Created by the Internet Arcitect</a>
                       
                           </div>
                   </div>
-                      </header>
+                </header>
 
 
                   {/* <div className={styles.text}>
@@ -102,9 +102,9 @@ export const Post = ({ titleofproject, bodyofproject, mainImagefirsttwo, images 
                   <div className={styles.text}>
                             <h1 className={styles.title} >{titleofproject}</h1>
                             {/* <h2>{categories}</h2> */}
-                      <div className={styles.bodyofproject}>
-                        <BlockContent blocks={bodyofproject} />
-                      </div>
+                      {/* <div className={styles.bodyofproject}> */}
+                        {/* <BlockContent blocks={bodyofproject} /> */}
+                      {/* </div> */}
                       </div>
 
 
@@ -166,7 +166,7 @@ export const getServerSideProps = async pageContext => {
   } else {
     return {
       props: {
-        bodyofproject: post.bodyofproject,
+        // bodyofproject: post.bodyofproject,
         titleofproject: post.titleofproject,
         mainImagefirsttwo: post.mainImagefirsttwo,
         // categories: post.categories,

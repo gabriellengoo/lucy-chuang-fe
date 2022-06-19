@@ -56,9 +56,10 @@ body {
     /* height: 500vh; might need? */
     /* overflow: auto; */
     overflow-x: hidden;
-    background-image: url("../public/images/background2.png");
+    /* background-image: url("../public/images/background2.png"); */
     /* background-repeat: no-repeat; */
     background-size: cover;
+    background-color: rgb(49, 49, 49);
     min-height: 100%
 }
 

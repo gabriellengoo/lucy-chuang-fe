@@ -45,9 +45,9 @@ export default function Home ({}) {
 
     <div className={styles.maininterior}>
       
-    <div className={styles.loaderwrapper}>
+    {/* <div className={styles.loaderwrapper}>
     <span className={styles.loader}><span className={styles.loaderinner}> <img className={styles.figuren} src="https://i.ibb.co/PmNwYcP/mr-bean-checking-time.gif"/></span></span>
-    </div>
+    </div> */}
 
       <div className={styles.editorialimages}>
         <div className={styles.wcontent}>
@@ -94,11 +94,11 @@ export default function Home ({}) {
                       </div>
                       </div> */}
 
-<div className={styles.logocont}>
+{/* <div className={styles.logocont}>
     <img className={styles.logo} src="https://i.ibb.co/9T4ft5j/logo.png"/>
-    </div>
+    </div> */}
 
-
+<div className={styles.all}>
 <div className={styles.allscr}>
 
 <div  className={styles.container}>
@@ -149,7 +149,7 @@ export default function Home ({}) {
     <div className={styles.item}></div>
   </div>
 </div>
-
+</div>
 
 </div>
 
