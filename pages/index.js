@@ -215,9 +215,9 @@ export default function Home({ posts }) {
                         </div>
 
 
-                  <div class={styles.botflowercont}>
+                  {/* <div className={styles.botflowercont}> */}
                   <img className={styles.botflower} src="https://i.ibb.co/TDXZH4y/1-2.png"/>
-                  </div>
+                  {/* </div> */}
 
 
                   <img className={styles.flowergreen} src="https://i.ibb.co/xzd0Kz4/9.png"/>
