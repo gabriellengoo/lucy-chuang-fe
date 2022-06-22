@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-
+import Marquee from "react-fast-marquee";
 // firsttwo
 
 export default function Home({ posts }) {
@@ -45,11 +45,42 @@ export default function Home({ posts }) {
 
 
   return (
-    <div data-scroll-speed=".0005" className={styles.container}>
+    <div data-scroll-speed="5" className={styles.container}>
       <Head>
         <title>Lucy Chuang</title>
         <meta name="description" content="Lucy Chuang portfolio" />
+
+
+        <>
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+  />
+  <meta
+    name="description"
+    content="Lucy Chuang portfolio author: Gabrielle the  Internet Arcitect ©2022 category:application-javascript"
+  />
+  {/* <meta property="og:url" content="http://niksgames.com/blockland" /> */}
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="Lucy Chuang portfolio" />
+  <meta
+    property="og:description"
+    content="Lucy Chuang portfolio author:Gabrielle ©2022 category:application-javascript"
+  />
+  <meta
+    property="og:image"
+    // content="http://niksgames.com/blockland/assets/blockland-og.jpg"
+  />
+  <meta property="og:image:type" content="https://i.ibb.co/9T4ft5j/logo.png" />
+  <meta property="og:image:width" content={1265} />
+  <meta property="og:image:height" content={817} />
+  <meta property="og:image:alt" content="Lucy Chuang portfolio" />
+</>
+
+
         <link rel="icon" href="https://i.ibb.co/9T4ft5j/logo.png" />
+        <link rel="apple-touch-icon" href="https://i.ibb.co/9T4ft5j/logo.png" />
+
         <script src="http://owlcarousel.owlgraphic.com/assets/vendors/jquery.mousewheel.min.js" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
@@ -66,7 +97,8 @@ export default function Home({ posts }) {
   <main className={styles.main}>
 {/* BACK IMG */}
 <div className='overflow-hidden'>
-      <div className={styles.test}></div></div>
+      {/* <div className={styles.test}></div> */}
+      </div>
 {/* BACK IMG */}
 {/* <div className='overflow-hidden'>
       <div className={styles.test2}></div></div> */}
@@ -118,12 +150,14 @@ export default function Home({ posts }) {
 
     <img className={styles.bigimgn} src="https://i.ibb.co/Y3s7XSH/entropy-link.png"/>
 
-    <div className={styles.blurtopcont}>
+    {/* <div className={styles.blurtopcont}>
     <img className={styles.blurtop} src="https://i.ibb.co/M7q9767/output-onlinepngtools.png"/>
-    </div>
+    </div> */}
 
-    <div className={styles.entropycont}> <p className={styles.entropy}>entropy entropy entropy entropy entropy entropy entropy
-     entropy entropy entropy entropy entropy 
+
+
+    <div className={styles.entropycont}><p className={styles.entropy}><Marquee>entropy entropy entropy entropy entropy entropy entropy
+     entropy entropy entropy entropy entropy entropy entropy </Marquee>
     </p>
     </div>
 
@@ -180,9 +214,13 @@ export default function Home({ posts }) {
                         </div>
 
 
+                  <div class={styles.botflowercont}>
                   <img className={styles.botflower} src="https://i.ibb.co/TDXZH4y/1-2.png"/>
-                  <img className={styles.flowergreen} src="https://i.ibb.co/xzd0Kz4/9.png"/>
+                  </div>
 
+
+                  <img className={styles.flowergreen} src="https://i.ibb.co/xzd0Kz4/9.png"/>
+                 
              
 
 
