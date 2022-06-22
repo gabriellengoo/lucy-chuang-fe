@@ -6,6 +6,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Marquee from "react-fast-marquee";
+// import Carousel from 'react-spring-3d-carousel';
 // firsttwo
 
 export default function Home({ posts }) {
