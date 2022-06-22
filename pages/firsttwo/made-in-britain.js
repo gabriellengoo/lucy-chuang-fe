@@ -5,11 +5,16 @@ import BlockContent from '@sanity/block-content-to-react';
 import Head from 'next/head';
 // import Image from "../../components/Image";
 import React from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+// import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'; arrowsPlugin 
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import Carousel, {  slidesToShowPlugin, } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
+import { FaHeart } from "react-icons/fa";
 
 
-export default function Home ({}) {
+
+export default function Home ({})
+ {
   return (
     
 <div className={styles.main}>
@@ -43,11 +48,38 @@ export default function Home ({}) {
 <img className={styles.flyingimg} src="https://i.ibb.co/hLScpnh/13-1-1.png"/>
 </div> */}
 
+
+
+
+{/* <Carousel arrows dots>
+<img src="https://i.ibb.co/wQKF71b/1a-1.png" />
+  <img src="https://i.ibb.co/J5NxhYM/2a-1.png" />
+  <img src="https://i.ibb.co/9gGpyLs/4a-1.png" />
+      </Carousel> */}
+
+
+
+
+
+
+
+
+
     <div className={styles.maininterior}>
       
     {/* <div className={styles.loaderwrapper}>
     <span className={styles.loader}><span className={styles.loaderinner}> <img className={styles.figuren} src="https://i.ibb.co/PmNwYcP/mr-bean-checking-time.gif"/></span></span>
     </div> */}
+
+{/* <Carousel  plugins={['arrows']}>
+<img src="https://i.ibb.co/wQKF71b/1a-1.png" />
+  <img src="https://i.ibb.co/J5NxhYM/2a-1.png" />
+  <img src="https://i.ibb.co/9gGpyLs/4a-1.png" />
+      </Carousel> */}
+
+
+
+
 
       <div className={styles.editorialimages}>
         <div className={styles.wcontent}>
@@ -69,6 +101,81 @@ export default function Home ({}) {
                       </header>
 
 
+
+{/* <div className={styles.carouselall}> */}
+{/*      <Carousel  className="pt-20"   plugins={[
+    'centered',
+    'infinite',
+    {
+      resolve:  arrowsPlugin, slidesToShowPlugin,
+      options: {
+        arrowLeft: <button><FaHeart  name="angle-double-left" /></button>,
+        arrowLeftDisabled:<button><FaHeart name="angle-left" /></button>,
+        arrowRight: <button><FaHeart  name="angle-double-right" /></button>,
+        arrowRightDisabled: <button><FaHeart name="angle-right" /></button>,
+        addArrowClickHandler: true,
+      },
+    },
+  ]}  >
+<img src="https://i.ibb.co/0fS3DX3/1b-1.png" />
+  <img src="https://i.ibb.co/dmGLmyy/2b-1.png" />
+  <img src="https://i.ibb.co/Vq5csSC/3b-1.png" />
+      </Carousel> */}
+
+
+<Carousel  
+
+plugins={[
+  'centered',
+  'infinite',
+  'arrows',
+  {
+    resolve: slidesToShowPlugin,
+    options: {
+     numberOfSlides: 2,
+    },
+  },
+]} 
+  >
+<img src="https://i.ibb.co/wQKF71b/1a-1.png" />
+  <img src="https://i.ibb.co/J5NxhYM/2a-1.png" />
+  <img src="https://i.ibb.co/9gGpyLs/4a-1.png" />
+      </Carousel >
+
+      <Carousel  className="pt-20"    plugins={[
+    'centered',
+    'infinite',
+    'arrows',
+    {
+      resolve: slidesToShowPlugin,
+      options: {
+       numberOfSlides: 2,
+      },
+    },
+  ]}  >
+<img src="https://i.ibb.co/0fS3DX3/1b-1.png" />
+  <img src="https://i.ibb.co/dmGLmyy/2b-1.png" />
+  <img src="https://i.ibb.co/Vq5csSC/3b-1.png" />
+      </Carousel>
+
+      <Carousel className="pt-20"    plugins={[
+    'centered',
+    'infinite',
+    'arrows',
+    {
+      resolve: slidesToShowPlugin,
+      options: {
+       numberOfSlides: 2,
+      },
+    },
+  ]}  >
+<img src="https://i.ibb.co/w4jrQkY/1c-1.png" />
+  <img src="https://i.ibb.co/B3jCknM/2c-1.png" />
+  <img src="https://i.ibb.co/tPzcDPB/3c-1.png" />
+      </Carousel>
+
+
+      {/* </div> */}
                   {/* <div className={styles.text}>
                             <h1 className={styles.title} >{titleofproject}</h1>
                       <div className={styles.bodyofproject}>
@@ -98,10 +205,10 @@ export default function Home ({}) {
     <img className={styles.logo} src="https://i.ibb.co/9T4ft5j/logo.png"/>
     </div> */}
 
-<div className={styles.all}>
-<div className={styles.allscr}>
+{/* <div className={styles.all}> */}
+{/* <div className={styles.allscr}> */}
 
-<div  className={styles.container}>
+{/* <div  className={styles.container}>
   <div className={styles.slider} id="slider-1">
     <img className={styles.item} src="https://i.ibb.co/wQKF71b/1a-1.png"/>
     <img className={styles.item} src="https://i.ibb.co/J5NxhYM/2a-1.png"/>
@@ -117,7 +224,6 @@ export default function Home ({}) {
   </div>
 </div>
 
-{/* https://i.ibb.co/dmGLmyy/2b-1.png*/}
 <div  className={styles.container}>
   <div className={styles.slider} id="slider-1">
   <img className={styles.item} src="https://i.ibb.co/0fS3DX3/1b-1.png"/>
@@ -135,7 +241,7 @@ export default function Home ({}) {
 
 <div  className={styles.container2}>
   <div className={styles.slider} id="slider-1">
-  <img className={styles.item} src="https://i.ibb.co/w4jrQkY/1c-1.png"/>
+  // <img className={styles.item} src="https://i.ibb.co/w4jrQkY/1c-1.png"/>
   <img className={styles.item} src="https://i.ibb.co/B3jCknM/2c-1.png"/>
   <img className={styles.item} src="https://i.ibb.co/tPzcDPB/3c-1.png"/>
     <div className={styles.item}></div>
@@ -149,10 +255,9 @@ export default function Home ({}) {
     <div className={styles.item}></div>
   </div>
 </div>
-</div>
+</div> */}
 
-</div>
-
+{/* </div> */}
 
 
 

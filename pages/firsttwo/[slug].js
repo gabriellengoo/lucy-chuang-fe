@@ -4,8 +4,10 @@ import styles from '../../styles/Post.module.css';
 // import BlockContent from '@sanity/block-content-to-react';
 import Head from 'next/head';
 import Image from "../../components/Image";
-
-
+// import Carousel from 'react-spring-3d-carousel';
+import React from "react";
+import ReactDOM from "react-dom";
+// import Example from "./example";
 
 export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
   const [imageUrl, setImageUrl] = useState('');
@@ -20,6 +22,8 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
 
     setImageUrl(imgBuilder.image(mainImagefirsttwo));
   }, []);
+
+
 
   return (
     
@@ -48,7 +52,9 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
             </Head>
 
 
-
+            <noscript>
+		You need to enable JavaScript to run this site.
+	</noscript>
 
 {/* <div className={styles.spinner-wrapper}>
 <img className={styles.flyingimg} src="https://i.ibb.co/hLScpnh/13-1-1.png"/>
@@ -139,7 +145,6 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
 </div>
   );
 };
-
 
 
 

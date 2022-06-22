@@ -45,7 +45,7 @@ export default function Home({ posts }) {
 
 
   return (
-    <div data-scroll-speed="5" className={styles.container}>
+    <div className={styles.container}>
       <Head>
         <title>Lucy Chuang</title>
         <meta name="description" content="Lucy Chuang portfolio" />
@@ -80,6 +80,7 @@ export default function Home({ posts }) {
 
         <link rel="icon" href="https://i.ibb.co/9T4ft5j/logo.png" />
         <link rel="apple-touch-icon" href="https://i.ibb.co/9T4ft5j/logo.png" />
+
 
         <script src="http://owlcarousel.owlgraphic.com/assets/vendors/jquery.mousewheel.min.js" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
@@ -292,15 +293,11 @@ export default function Home({ posts }) {
     <ul className="list-none font-light text-left" >
     <p className=' text-left '>Contact me :)</p>
       <li>xinyu.c.contact@gmail.com</li>
-      {/* <li>Instagram</li> */}
       <a href="https://www.instagram.com/chuangxyyy/" data-location="internal">Instagram</a>
     </ul>
   </div>
 </div>
 
-            {/* <div classname='flex left-10 relative'>
-              <p className='underline'>Archive</p>
-            </div> */}
             <div>
                 <p>Lucy Chuang 2022</p>
                 <a href="https://www.instagram.com/is_this_gabrielle/" data-location="internal">© Created by the Internet Arcitect</a>
