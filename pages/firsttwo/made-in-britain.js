@@ -9,9 +9,9 @@ import React from 'react';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 // import Carousel, {  slidesToShowPlugin, } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-// import Carousel from '@brainhubeu/react-carousel';
-// import  {slidesToShowPlugin} from '@brainhubeu/react-carousel';
-import { FaHeart } from "react-icons/fa";
+import Carousel from '@brainhubeu/react-carousel';
+import  {slidesToShowPlugin} from '@brainhubeu/react-carousel';
+// import { FaHeart } from "react-icons/fa";
 
 
 
@@ -125,7 +125,7 @@ export default function Home ({})
       </Carousel> */}
 
 
-{/* <Carousel  
+<Carousel  
 
 plugins={[
   'centered',
@@ -174,7 +174,7 @@ plugins={[
 <img src="https://i.ibb.co/w4jrQkY/1c-1.png" />
   <img src="https://i.ibb.co/B3jCknM/2c-1.png" />
   <img src="https://i.ibb.co/tPzcDPB/3c-1.png" />
-      </Carousel> */}
+      </Carousel>
 
 
       {/* </div> */}
