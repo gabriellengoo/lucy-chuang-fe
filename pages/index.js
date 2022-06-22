@@ -79,8 +79,8 @@ export default function Home({ posts }) {
 </>
 
 
-        <link rel="icon" href="https://i.ibb.co/9T4ft5j/logo.png" />
         <link rel="apple-touch-icon" href="https://i.ibb.co/9T4ft5j/logo.png" />
+        <link rel="icon" href="https://i.ibb.co/9T4ft5j/logo.png" />
 
 
         <script src="http://owlcarousel.owlgraphic.com/assets/vendors/jquery.mousewheel.min.js" defer></script>
@@ -216,9 +216,9 @@ export default function Home({ posts }) {
                         </div>
 
 
-                  {/* <div className={styles.botflowercont}> */}
+                  <div className={styles.botflowercont}>
                   <img className={styles.botflower} src="https://i.ibb.co/TDXZH4y/1-2.png"/>
-                  {/* </div> */}
+                  </div>
 
 
                   <img className={styles.flowergreen} src="https://i.ibb.co/xzd0Kz4/9.png"/>
