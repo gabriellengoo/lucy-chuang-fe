@@ -11,11 +11,11 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 // import { FaHeart } from "react-icons/fa";
 import 'keen-slider/keen-slider.min.css';
 import KeenSlider from 'keen-slider';
-import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
+import { UseKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
 
 
-export default container = () => {
-  const [sliderRef] = useKeenSlider({
+export  const Post = () => {
+  const [sliderRef] = UseKeenSlider({
     breakpoints: {
       "(min-width: 100vw)": {
         slides: { perView: 2, spacing: 50 },
@@ -309,3 +309,5 @@ function Arrow(props) {
     </svg>
   )
 }
+
+export default Post;
