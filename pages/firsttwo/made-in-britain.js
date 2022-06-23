@@ -14,7 +14,7 @@ import KeenSlider from 'keen-slider';
 import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
 
 
-export default () => {
+export default container = () => {
   const [sliderRef] = useKeenSlider({
     breakpoints: {
       "(min-width: 100vw)": {
