@@ -1,6 +1,7 @@
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import styles from '../../styles/Post.module.css';
+// import style from '../../styles/Post.module.scss';
 // import BlockContent from '@sanity/block-content-to-react';
 import Head from 'next/head';
 import Image from "../../components/Image";
@@ -8,9 +9,25 @@ import Image from "../../components/Image";
 import React from "react";
 import ReactDOM from "react-dom";
 // import Example from "./example";
+import 'keen-slider/keen-slider.min.css';
+import KeenSlider from 'keen-slider';
+import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
+
+
 
 export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
   const [imageUrl, setImageUrl] = useState('');
+  const [refCallback, slider, sliderNode] = useKeenSlider(
+    {
+      slideChanged() {
+        console.log('slide changed')
+      },
+    },
+    [
+      // add plugins here
+    ]
+  )
+
 
   console.log(
     images)
@@ -59,6 +76,13 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
 {/* <div className={styles.spinner-wrapper}>
 <img className={styles.flyingimg} src="https://i.ibb.co/hLScpnh/13-1-1.png"/>
 </div> */}
+
+
+
+
+
+
+
 
     <div className={styles.maininterior}>
       

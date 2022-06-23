@@ -94,6 +94,9 @@ export default function Home({ posts }) {
         
       </Head>
 
+      <noscript>
+		You need to enable JavaScript to run this site.
+	</noscript>
 
       {/* <img objectFit={"cover"} layout={"fill"} src="https://i.ibb.co/MfgWfH4/background-e.jpg" />  */}
   <main className={styles.main}>

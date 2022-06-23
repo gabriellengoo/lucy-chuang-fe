@@ -149,7 +149,7 @@
 }
 
 
-/* big head at end */
+/* big head at end */ 
 .wrapper > div:nth-child(1)  > img:nth-child(1) {
   -webkit-animation:none !important;
   animation:none !important;

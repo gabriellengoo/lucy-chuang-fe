@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@brainhubeu/react-carousel": "^2.0.4",
+    "@brainhubeu/react-carousel": "^1.12.9-alpha",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^3.2.0",
     "@sanity/image-url": "^0.140.19",
     "extract-text-webpack-plugin": "^3.0.2",
     "i": "^0.3.7",
+    "keen-slider": "^6.7.0",
     "locomotive-scroll": "^4.1.4",
     "next": "12.1.6",
     "next-sanity": "^0.1.12",

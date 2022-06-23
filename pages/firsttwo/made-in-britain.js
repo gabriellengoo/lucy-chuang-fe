@@ -8,14 +8,27 @@ import React from 'react';
 // import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'; arrowsPlugin 
 import 'pure-react-carousel/dist/react-carousel.es.css';
 // import Carousel, {  slidesToShowPlugin, } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
-import Carousel from '@brainhubeu/react-carousel';
-import  {slidesToShowPlugin} from '@brainhubeu/react-carousel';
 // import { FaHeart } from "react-icons/fa";
+import 'keen-slider/keen-slider.min.css';
+import KeenSlider from 'keen-slider';
+import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
 
 
+export default () => {
+  const [sliderRef] = useKeenSlider({
+    breakpoints: {
+      "(min-width: 100vw)": {
+        slides: { perView: 2, spacing: 50 },
+      },
+      "(min-width: 100vw)": {
+        slides: { perView: 3, spacing: 100 },
+      },
+    },
+    slides: { perView: 1 },
+  })
 
-export default function Home ({})
+// export default function Home ({})
+
  {
   return (
     
@@ -58,7 +71,6 @@ export default function Home ({})
   <img src="https://i.ibb.co/J5NxhYM/2a-1.png" />
   <img src="https://i.ibb.co/9gGpyLs/4a-1.png" />
       </Carousel> */}
-
 
 
 
@@ -124,57 +136,54 @@ export default function Home ({})
   <img src="https://i.ibb.co/Vq5csSC/3b-1.png" />
       </Carousel> */}
 
+<div className={styles.carouselallcont}>
 
-{/* <Carousel  
+<div className={styles.carouselall}>
 
-plugins={[
-  'centered',
-  'infinite',
-  'arrows',
-  {
-    resolve: slidesToShowPlugin,
-    options: {
-     numberOfSlides: 2,
-    },
-  },
-]} 
-  >
-<img src="https://i.ibb.co/wQKF71b/1a-1.png" />
-  <img src="https://i.ibb.co/J5NxhYM/2a-1.png" />
-  <img src="https://i.ibb.co/9gGpyLs/4a-1.png" />
-      </Carousel >
+<div ref={sliderRef} className="keen-slider">
+<div className="keen-slider__slide number-slide1"><img src="https://i.ibb.co/wQKF71b/1a-1.png" />
+</div>
+      <div className="keen-slider__slide number-slide2">  <img src="https://i.ibb.co/J5NxhYM/2a-1.png" />
+</div>
+      <div className="keen-slider__slide number-slide3">  <img src="https://i.ibb.co/9gGpyLs/4a-1.png" />
+</div>
+<div className="keen-slider__slide number-slide3">  <img src="https://i.ibb.co/9gGpyLs/4a-1.png" />
+</div>
+    </div>
 
-      <Carousel  className="pt-20"    plugins={[
-    'centered',
-    'infinite',
-    'arrows',
-    {
-      resolve: slidesToShowPlugin,
-      options: {
-       numberOfSlides: 2,
-      },
-    },
-  ]}  >
-<img src="https://i.ibb.co/0fS3DX3/1b-1.png" />
-  <img src="https://i.ibb.co/dmGLmyy/2b-1.png" />
-  <img src="https://i.ibb.co/Vq5csSC/3b-1.png" />
-      </Carousel>
+    <div ref={sliderRef} className="pt-20 keen-slider">
+    <div className="keen-slider__slide number-slide1"><img src="https://i.ibb.co/0fS3DX3/1b-1.png" />
+</div>
+      <div className="keen-slider__slide number-slide2">  <img src="https://i.ibb.co/dmGLmyy/2b-1.png" />
+</div>
+      <div className="keen-slider__slide number-slide3">  <img src="https://i.ibb.co/Vq5csSC/3b-1.png" />
+</div>
+<div className="keen-slider__slide number-slide3">  <img src="https://i.ibb.co/Vq5csSC/3b-1.png" />
+</div>
+    </div>
 
-      <Carousel className="pt-20"    plugins={[
-    'centered',
-    'infinite',
-    'arrows',
-    {
-      resolve: slidesToShowPlugin,
-      options: {
-       numberOfSlides: 2,
-      },
-    },
-  ]}  >
-<img src="https://i.ibb.co/w4jrQkY/1c-1.png" />
-  <img src="https://i.ibb.co/B3jCknM/2c-1.png" />
-  <img src="https://i.ibb.co/tPzcDPB/3c-1.png" />
-      </Carousel> */}
+    <div ref={sliderRef} className="pt-20 keen-slider">
+    <div className="keen-slider__slide number-slide1"><img  src="https://i.ibb.co/w4jrQkY/1c-1.png"/>
+</div>
+      <div className="keen-slider__slide number-slide2">  <img src="https://i.ibb.co/B3jCknM/2c-1.png" />
+</div>
+      <div className="keen-slider__slide number-slide3">  <img src="https://i.ibb.co/tPzcDPB/3c-1.png" />
+</div>
+<div className="keen-slider__slide number-slide3">  <img src="https://i.ibb.co/tPzcDPB/3c-1.png" />
+</div>
+    </div>
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
 
 
       {/* </div> */}
@@ -277,6 +286,26 @@ plugins={[
 </div>
   );
 };
+}
 
 
-
+function Arrow(props) {
+  const disabeld = props.disabled ? " arrow--disabled" : ""
+  return (
+    <svg
+      onClick={props.onClick}
+      className={`arrow ${
+        props.left ? "arrow--left" : "arrow--right"
+      } ${disabeld}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      {props.left && (
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+      )}
+      {!props.left && (
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      )}
+    </svg>
+  )
+}
