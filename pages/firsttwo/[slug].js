@@ -104,7 +104,44 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
         <script type="module" src="../../assets/app.js" defer></script>
       </Head>
 
-      <div className="round-carousel">
+ 
+
+      <noscript>You need to enable JavaScript to run this site.</noscript>
+
+      {/* <div className={styles.spinner-wrapper}>
+<img className={styles.flyingimg} src="https://i.ibb.co/hLScpnh/13-1-1.png"/>
+</div> */}
+
+      <div className={styles.maininterior}>
+        {/* <div className={styles.loaderwrapper}>
+    <span className={styles.loader}><span className={styles.loaderinner}> <img className={styles.figuren} src="https://i.ibb.co/PmNwYcP/mr-bean-checking-time.gif"/></span></span>
+    </div> */}
+       <div className={styles.text}>
+                <h1 className={styles.title}>{titleofproject}</h1>
+              </div>
+
+        <div className={styles.editorialimages}>
+          <div className={styles.wcontent}>
+            <header className={styles.header}>
+              <div className={styles.tlabel}>
+                <div className={styles.headeredition}>
+                  <a href="../" data-location="internal">
+                    2022 LUCY CHUANG
+                  </a>
+                </div>
+                <div className={styles.headertime}>06:20:22</div>
+                <div id="header-customer">
+                  <a
+                    href="https://www.instagram.com/is_this_gabrielle/"
+                    data-location="internal"
+                  >
+                    © Created by the Internet Arcitect
+                  </a>
+                </div>
+              </div>
+            </header>
+
+            <div className="round-carousel">
         <div ref={containerRef} className="rotation-container">
           {images.map(({ _key, asset }, index) => (
             <div
@@ -135,39 +172,6 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
           })} */}
         </div>
       </div>
-
-      <noscript>You need to enable JavaScript to run this site.</noscript>
-
-      {/* <div className={styles.spinner-wrapper}>
-<img className={styles.flyingimg} src="https://i.ibb.co/hLScpnh/13-1-1.png"/>
-</div> */}
-
-      <div className={styles.maininterior}>
-        {/* <div className={styles.loaderwrapper}>
-    <span className={styles.loader}><span className={styles.loaderinner}> <img className={styles.figuren} src="https://i.ibb.co/PmNwYcP/mr-bean-checking-time.gif"/></span></span>
-    </div> */}
-
-        <div className={styles.editorialimages}>
-          <div className={styles.wcontent}>
-            <header className={styles.header}>
-              <div className={styles.tlabel}>
-                <div className={styles.headeredition}>
-                  <a href="../" data-location="internal">
-                    2022 LUCY CHUANG
-                  </a>
-                </div>
-                <div className={styles.headertime}>06:20:22</div>
-                <div id="header-customer">
-                  <a
-                    href="https://www.instagram.com/is_this_gabrielle/"
-                    data-location="internal"
-                  >
-                    © Created by the Internet Arcitect
-                  </a>
-                </div>
-              </div>
-            </header>
-
             {/* <div className={styles.text}>
                             <h1 className={styles.title} >{titleofproject}</h1>
                       <div className={styles.bodyofproject}>
@@ -181,23 +185,17 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
 
                   </div> */}
 
-            <div className={styles.section}>
+            {/* <div className={styles.section}>
               <div className={styles.text}>
                 <h1 className={styles.title}>{titleofproject}</h1>
-                {/* <h2>{categories}</h2> */}
-                {/* <div className={styles.bodyofproject}> */}
-                {/* <BlockContent blocks={bodyofproject} /> */}
-                {/* </div> */}
               </div>
 
               <div className={styles.hscroll3}>
-                {/* <div className="hscroll3"> */}
                 {images.map(({ _key, asset }, image) => (
                   <Image key={_key} identifier="image" image={asset} />
                 ))}
               </div>
-              {/* </div> */}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
