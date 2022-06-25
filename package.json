@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.12.9-alpha",
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.9.3",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^3.2.0",
     "@sanity/image-url": "^0.140.19",
@@ -30,7 +32,8 @@
     "react-icons": "^4.4.0",
     "react-loader-spinner": "^5.1.5",
     "react-multi-carousel": "^2.8.1",
-    "react-spring-3d-carousel": "^1.2.1",
+    "react-spring": "^9.4.5",
+    "react-spring-3d-carousel": "1.2.0",
     "slick-carousel": "^1.8.1",
     "uuid": "^8.3.2",
     "webpack": "^5.73.0"

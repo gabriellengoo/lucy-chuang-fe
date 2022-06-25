@@ -12,6 +12,7 @@ import ReactDOM from "react-dom";
 import "keen-slider/keen-slider.min.css";
 import KeenSlider from "keen-slider";
 import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
+import CarouselComponent from "../../components/carousel";
 
 export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
   const [imageUrl, setImageUrl] = useState("");
@@ -104,8 +105,6 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
         <script type="module" src="../../assets/app.js" defer></script>
       </Head>
 
- 
-
       <noscript>You need to enable JavaScript to run this site.</noscript>
 
       {/* <div className={styles.spinner-wrapper}>
@@ -116,9 +115,9 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
         {/* <div className={styles.loaderwrapper}>
     <span className={styles.loader}><span className={styles.loaderinner}> <img className={styles.figuren} src="https://i.ibb.co/PmNwYcP/mr-bean-checking-time.gif"/></span></span>
     </div> */}
-       <div className={styles.text}>
-                <h1 className={styles.title}>{titleofproject}</h1>
-              </div>
+        {/* <div className={styles.text}>
+          <h1 className={styles.title}>{titleofproject}</h1>
+        </div> */}
 
         <div className={styles.editorialimages}>
           <div className={styles.wcontent}>
@@ -141,37 +140,10 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
               </div>
             </header>
 
-            <div className="round-carousel">
-        <div ref={containerRef} className="rotation-container">
-          {images.map(({ _key, asset }, index) => (
-            <div
-              ref={(el) => (itemsRef.current[index] = el)}
-              key={index}
-              className={`item-container item-container-${index + 1} ${
-                index + 1 > 6 ? "hidden" : ""
-              }`}
-            >
-              <Image
-                className="carousel-item test"
-                key={_key}
-                identifier="image"
-                image={asset}
-              />
-            </div>
-          ))}
-          {/* {[...Array(6).keys()].map((item, index) => {
-            return (
-              <div
-                ref={(el) => (itemsRef.current[index] = el)}
-                key={index}
-                className={`item-container item-container-${index + 1}`}
-              >
-                <img className="item" src="https://unsplash.it/225/300" />
-              </div>
-            );
-          })} */}
+            <div className={styles.text}>
+          <h1 className={styles.title}>{titleofproject}</h1>
         </div>
-      </div>
+
             {/* <div className={styles.text}>
                             <h1 className={styles.title} >{titleofproject}</h1>
                       <div className={styles.bodyofproject}>
@@ -184,18 +156,8 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
                       </span>
 
                   </div> */}
-
-            {/* <div className={styles.section}>
-              <div className={styles.text}>
-                <h1 className={styles.title}>{titleofproject}</h1>
-              </div>
-
-              <div className={styles.hscroll3}>
-                {images.map(({ _key, asset }, image) => (
-                  <Image key={_key} identifier="image" image={asset} />
-                ))}
-              </div>
-            </div> */}
+            <CarouselComponent images={images} />
+            {/* </div> */}
           </div>
         </div>
       </div>
