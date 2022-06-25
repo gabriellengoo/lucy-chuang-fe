@@ -1,0 +1,134 @@
+.round-carousel {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.active-item {
+  z-index: 9999 !important;
+  transform: rotate() !important;
+  transition: 1s;
+}
+.active-item__scale img {
+  transform: scale(1.5);
+  transition: 1s;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes backwards-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes scaling {
+  0% {
+    transform: scale(0.75);
+  }
+  15% {
+    transform: scale(0.65);
+  }
+  65% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+.rotation-container {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  top: 200px;
+  left: calc(50% - 50px);
+  /* transform: rotate(90deg); */
+  /* animation: rotation 20s infinite linear; */
+  transition: transform 3s ease-in-out;
+}
+.rotation-container:hover {
+  animation-play-state: paused;
+}
+.rotation-container:hover .item-container {
+  animation-play-state: paused;
+}
+.rotation-container:hover .item {
+  animation-play-state: paused;
+}
+.rotation-container .item-container {
+  position: absolute;
+  transition: transform 3s ease-in-out;
+  /* animation: backwards-rotation 20s infinite linear; */
+}
+.item-container-1 {
+  bottom: -60px;
+  left: -110px;
+}
+
+.item-container-2 {
+  top: -60px;
+  left: -110px;
+}
+
+.item-container-3 {
+  left: 10px;
+  bottom: 145px;
+}
+
+.item-container-4 {
+  top: -60px;
+  right: -110px;
+}
+
+.item-container-5 {
+  bottom: -60px;
+  right: -110px;
+}
+
+.item-container-6 {
+  left: 10px;
+  top: 145px;
+}
+.rotation-container .item {
+  display: block;
+  width: 160px;
+  height: 200px;
+  background-color: #e91b23;
+  /* animation: scaling 20s infinite linear; */
+}
+.rotation-container .item-1 {
+  /* animation-delay: -16.6666666667s; */
+}
+.rotation-container .item-2 {
+  /* animation-delay: -20s; */
+}
+.rotation-container .item-3 {
+  /* animation-delay: -23.3333333333s; */
+}
+.rotation-container .item-4 {
+  /* animation-delay: -26.6666666667s; */
+}
+.rotation-container .item-5 {
+  /* animation-delay: -30s; */
+}
+.rotation-container .item-6 {
+  /* animation-delay: -33.3333333333s; */
+}
+
+.carousel-item {
+  width: 20px !important;
+}

@@ -1,5 +1,5 @@
 import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "../../styles/Post.module.css";
 // import style from '../../styles/Post.module.scss';
 // import BlockContent from '@sanity/block-content-to-react';
@@ -27,6 +27,11 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
     ]
   );
 
+  const containerRef = useRef(null);
+  const itemsRef = useRef([]);
+
+  const [activeElement, setActiveElement] = useState(0);
+
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
       projectId: "wie5l8nw",
@@ -34,7 +39,24 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
     });
 
     setImageUrl(imgBuilder.image(mainImagefirsttwo));
-  }, []);
+
+    console.log(images);
+
+    itemsRef.current.map((item, index) =>
+      item.addEventListener("click", () => {
+        containerRef.current.style.transform = `rotateZ(${
+          300 - 60 * index
+        }deg)`;
+        itemsRef.current.map(
+          (item) => (item.style.transform = `rotateZ(-${300 - 60 * index}deg)`)
+        );
+        for (const node of itemsRef.current) {
+          node.classList.remove("active-item", "active-item__scale");
+        }
+        item.classList.add("active-item", "active-item__scale");
+      })
+    );
+  }, [mainImagefirsttwo]);
 
   return (
     <div className={styles.main}>
@@ -93,6 +115,9 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
         {/* <div className={styles.loaderwrapper}>
     <span className={styles.loader}><span className={styles.loaderinner}> <img className={styles.figuren} src="https://i.ibb.co/PmNwYcP/mr-bean-checking-time.gif"/></span></span>
     </div> */}
+        <div className={styles.text}>
+          <h1 className={styles.title}>{titleofproject}</h1>
+        </div>
 
         <div className={styles.editorialimages}>
           <div className={styles.wcontent}>
