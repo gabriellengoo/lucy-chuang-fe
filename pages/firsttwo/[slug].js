@@ -115,9 +115,15 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
         {/* <div className={styles.loaderwrapper}>
     <span className={styles.loader}><span className={styles.loaderinner}> <img className={styles.figuren} src="https://i.ibb.co/PmNwYcP/mr-bean-checking-time.gif"/></span></span>
     </div> */}
+<<<<<<< HEAD
         {/* <div className={styles.text}>
           <h1 className={styles.title}>{titleofproject}</h1>
         </div> */}
+=======
+        <div className={styles.text}>
+          <h1 className={styles.title}>{titleofproject}</h1>
+        </div>
+>>>>>>> 655e24354841e1af53c8c2210f0f66a8ff945a1b
 
         <div className={styles.editorialimages}>
           <div className={styles.wcontent}>
@@ -140,10 +146,13 @@ export const Post = ({ titleofproject, mainImagefirsttwo, images }) => {
               </div>
             </header>
 
+<<<<<<< HEAD
             <div className={styles.text}>
           <h1 className={styles.title}>{titleofproject}</h1>
         </div>
 
+=======
+>>>>>>> 655e24354841e1af53c8c2210f0f66a8ff945a1b
             {/* <div className={styles.text}>
                             <h1 className={styles.title} >{titleofproject}</h1>
                       <div className={styles.bodyofproject}>
